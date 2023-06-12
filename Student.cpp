@@ -48,9 +48,10 @@ public:
 class Payment {
 	
 public:
-	Payment() { this->xerox_of_receipts = new string[4]; }
-	
 	string* xerox_of_receipts;
+
+	Payment() { xerox_of_receipts = new string[4]; }
+	~Payment() { delete[] xerox_of_receipts; }
 };
 
 class Student {
